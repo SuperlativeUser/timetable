@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Time_Adapter TIME = new Time_Adapter(this, com.example.myapplication.R.layout.time_layout, times);
-
+        AdapterFactory adapterFactory = new AdapterFactory(this, times);
+        Time_Adapter TIME = adapterFactory.getAdapter(R.layout.time_layout);
+        Time_Adapter Lesson = adapterFactory.getAdapter(R.layout.lessons_layout);
         // устанавливаем адаптер
         TimeList.setAdapter(TIME);
        // LessonsList.setAdapter(LESSONS);
