@@ -18,6 +18,7 @@ public class Time_Adapter extends ArrayAdapter<Info> {
         this.layout = resource;
         this.inflater = LayoutInflater.from(context);
     }
+    //qwerty
 
     public View getView(int position, View convertView, ViewGroup parent) {
 

@@ -1,9 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import java.util.List;
 import java.util.ArrayList;
@@ -24,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Time_Adapter TIME = new Time_Adapter(this, com.example.myapplication.R.layout.time_layout, times);
-
+        Time_Adapter TIME = new Time_Adapter(this, R.layout.time_layout, times);
+        Time_Adapter LESSONS = new Time_Adapter(this, R.layout.lessons_layout, lessons);
         // устанавливаем адаптер
         TimeList.setAdapter(TIME);
-       // LessonsList.setAdapter(LESSONS);
+        LessonsList.setAdapter(LESSONS);
 
     }
 

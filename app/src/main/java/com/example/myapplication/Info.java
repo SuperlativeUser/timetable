@@ -4,6 +4,7 @@ public class Info {
     private String object;
 
     public Info(String object) {
+
         this.object = object;
     }
 
