@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import java.util.List;
 import java.util.ArrayList;
@@ -23,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
         ListView LessonsList = (ListView) findViewById(R.id.LessonsList);
 
 
+        AdapterFactoryInterface adapterFactoryInterface = new AdapterFactory(this, R.layout.time_layout, times, R.layout.lessons_layout, lessons);
 
-        Time_Adapter TIME = new Time_Adapter(this, com.example.myapplication.R.layout.time_layout, times);
-        Lesson_Adapter LESSON = new Lesson_Adapter(this, com.example.myapplication.R.layout.lessons_layout, lessons);
+        Time_Adapter TIME = adapterFactoryInterface.getTimeAdapter();
+        Lesson_Adapter LESSON = adapterFactoryInterface.getLessonAdapter();
         // устанавливаем адаптер
         TimeList.setAdapter(TIME);
         LessonsList.setAdapter(LESSON);
