@@ -50,10 +50,11 @@
 
         <ListView
             android:id="@+id/LessonsList"
-            android:layout_width="218dp"
+            android:layout_width="210dp"
+
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/TimeList"
-            android:layout_marginLeft="20dp"
+
             android:layout_marginRight="-216dp"
             android:background="@color/colorMain"
             android:divider="@android:color/transparent">
